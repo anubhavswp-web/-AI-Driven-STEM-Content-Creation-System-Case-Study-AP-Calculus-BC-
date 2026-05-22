@@ -1,0 +1,12 @@
+Create 5 different AP exam level FRQs practice questions with model solutions and scoring guidelines. 
+AP Free-Response Questions (FRQs) vary by subject, but generally consist of long and short questions, each with a different point value, often ranging from 3 to 10 points per question. I want different FRQs with different scoring guidelines . Keep the weightage of the scoring point according to the difficulty level of the step of solution.
+
+Mandatory and strict rule: 
+1. Always give a clear code block for markdown which I can copy and paste to generate docx from pandoc. 
+2. Always use a different function in each problem you generate, like different problem for practice test, examples, FRQs, MCQs etc. any two questions you generate for this chat must not have same function across various categories. 
+3. Use different functions in each category. Practice problem should be numbered as problem 1. problem 2 etc.
+4.include questions very similar to AP level exams
+
+For {{SUBTOPIC}} using:
+{{DETAILS}}
+In case of any confusion please follow the master prompt.

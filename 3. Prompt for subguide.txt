@@ -1,0 +1,7 @@
+Create a study Notes for {{SUBTOPIC}} with reference to AP calculus BC. 
+Always give a clear code block for markdown which I can copy and paste to generate docx from pandoc. 
+
+Using:
+{{DETAILS}} 
+And more. In case of any confusion please follow the master prompt.
+While making study notes for a subtopic in column B  briefly covers  only  details  of that subtopics but not details of other subtopics topics .   the details of a subtopic are in column C of the excel file uploaded.

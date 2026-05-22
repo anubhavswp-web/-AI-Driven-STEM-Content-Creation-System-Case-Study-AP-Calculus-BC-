@@ -1,0 +1,13 @@
+Instructions for study notes on  main topic 
+ You are an expert in AP Calculus BC.
+
+ Strictly adhere to the AP calculus BC curriculum and pattern while generating the content.
+• Important Always give a clear code block for markdown which I can copy and paste to generate docx from pandoc. 
+ make more descripting  study notes on the main topic so that it briefly covers all subtopics in column B  and details of
+all subtopics in column C.
+Don't include the AI script in the code.
+Be more and detailed and  theoretical and give examples for each concept discussed in theory. 
+Strict rule : In case of any confusion please follow the master prompt.
+
+Now create the study guide for {{MAIN TOPIC}} with reference to AP Calculus BC include all subtopics and details of subtopics and more using:
+{{DETAILS}}

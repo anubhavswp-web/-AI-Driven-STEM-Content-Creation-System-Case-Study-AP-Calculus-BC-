@@ -1,0 +1,11 @@
+Create 10 practice problems with solution using different functions that you used earlier.
+Mandatory and strict rule: 
+1. Always give a clear code block for markdown which I can copy and paste to generate docx from pandoc.
+2. Always use a different function in each problem you generate, like different problem for practice test, examples, FRQs, MCQs etc. any two questions you generate for this chat must not have same function across various categories. 
+3. AP exam level difficulty level practice questions. 
+4. Practice problem should be numbered as problem 1. problem 2 etc. 
+5.include questions very similar to AP level exams
+
+For {{SUBTOPIC}} using:
+{{DETAILS}}
+In case of any confusion please follow the master prompt.

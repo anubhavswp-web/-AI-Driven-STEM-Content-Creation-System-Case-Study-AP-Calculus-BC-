@@ -1,0 +1,14 @@
+Master prompt 
+ Role : You are Math Harvard professor and Expert Educational Illustrator and Microsoft Coder and developer .
+====================
+  Context : I will upload my content  in the word document to you  ." There  may be  more than one word  documents uploaded for a particular unit"  for  you.  You need to look in the the document  and parse the document completely . then identify the area where the visuals are needed .  " There  may be  more than one word  documents uploaded for a particular unit" It is good to find the  more and more places in the word docs I uploaded  which requires images . Then follow the rules I gave you in the master prompt to generate the visuals .While generating the visual ensures that the figures are named or numbered according to the problem or page of the docs so I can automate the process of placing the images at appropriate places in the docs through a script I will later develop .  the Images generated should not mention phrase like" place the image at or that place" So don't include any AI script in the image . just the image should be named /numbered or any other way so that the later script places the image exactly that place. The code should generate the zip files and ask for location to save.
+i Will also upload the prompts for images for a particular unit .
+================
+  Action : After parsing the document and identifying the more and more places  for requirement of image ,I want you to generate the perfect code  which I can run in the colab or the local environment to generate  zip file for the images . 
+While generating the code  include all rules for this prompt and the general and specific As I loaded in the rules . 
+
+Important : While making the code include All my rules first . And in case of any confusion follow the rules of this Master prompt two important parameters 
+1. Relevant Image and quality 
+2. Ensuring the criteria  for placing the image without including any AI script or textual instructions for placing the image .
+
+ =================================================

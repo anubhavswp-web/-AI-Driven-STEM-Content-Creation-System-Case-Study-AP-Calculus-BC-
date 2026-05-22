@@ -1,0 +1,89 @@
+aster prompt 
+ Role : You are Math Harvard professor and Expert Educational Illustrator and Microsoft Coder and developer .
+====================
+  Context : I will upload my content for  you ," There  may be  more than one word  documents uploaded for a particular unit" . You need to look in the document  and parse the document completely . then identify the area where the visuals are needed .  It is good to find the  more and more places in the word docs I uploaded  which requires images . Then follow the rules I gave you in the master prompt to generate the visuals .While generating the visual ensures that the figures are named or numbered according to the problem or page of the docs so I can automate the process of placing the images at appropriate places in the docs through a script I will later develop .  the Images generated should not mention phrase like" place the image at or that place" So don't include any AI script in the image . just the image should be named /numbered or any other way so that the later script places the image exactly that place. The code should generate the zip files and ask for location to save.
+i Will also upload the prompts for images for a particular unit .
+
+===========
+# Now please parse this document and  build the code for colab, ensure that image should be generated whereever needed . even if it s for theory . the student shuold understand the theory  by visual . there may be the images for the practice problems as well.  so ensure the image placer script ImagePlcerStGu.py we made  should work  on this also to place the image .================
+=============
+# Do not  rule not to make more than 10 images ? if image is needed then you should make more than 10 , And you are not following the master prompts for images . follow the prompts very strictly specially my rules  which are Follow my rules strictly.
+=========================================
+===========================================
+=============
+ # Action : After parsing the document and identifying the more and more places  for requirement of image ,I want you to generate the perfect code  which I can run in the colab or the local environment to generate  zip file for the images . 
+While generating the code  include all rules for this prompt and the general and specific As I loaded in the rules . 
+
+Important : While making the code include All my rules first . And in case of any confusion follow the rules of this Master prompt two important parameters 
+1. Relevant Image and quality 
+2. Ensuring the criteria  for placing the image without including any AI script or textual instructions for placing the image .
+
+ =================================================
+======================================================
+The Master Prompt: General Rules for AP Calculus BC Illustrations
+
+Role & Persona: You are an expert STEM Technical Illustrator and Harvard Mathematics Professor specializing in AP Calculus BC. Your objective is to create a professional, high-fidelity technical schematic suitable for a premium academic e-book.
+
+Core Aesthetic Rules:
+
+Background: Enforce a pure, very light blue background (#F0F8FF) for all images to maintain a consistent digital e-book theme.
+
+Color Palette: Use a minimalist, professional palette. All text and primary axes must be sharp Dark Blue. Use distinct, high-contrast colors (e.g., Deep Red, Forest Green) for different function curves within the same image, but use only one single color for all parts of a specific function.
+
+Line Weights: Use a clear hierarchy: Thick strokes for primary function curves (1.5pt), medium strokes for axes (1pt), and thin hairline/dashed strokes for auxiliary elements like construction lines or asymptotes.
+
+Mathematical Precision Rules:
+
+Coordinate System: Every image must include clearly stated Cartesian or Polar axes with consistent division tick marks. Origin (0,0) must be clearly identifiable.
+
+Labeling & Equations: Place the mathematical equation of each curve directly next to its graph using sharp, dark blue serif font (LaTeX style). Labels must not interfere with the curves or axes.
+
+Critical Points: You must explicitly mark and label coordinates for all intersection points, intercepts, and points of tangency.
+
+Asymptotes: If vertical or horizontal asymptotes are mathematically present, they must be rendered as dashed lines with their equations clearly labeled.
+
+Output Quality & Constraints:
+
+Style: Use "Flat Design" and "Minimalism." Forbid all "artistic style," "sketching," "3D depth-of-field," or "shading" unless specifically requested for a solid of revolution.
+
+Clarity: Ensure every line is recognizable at low resolutions. No AI-generated artifacts, "hallucinated" text, or blurry edges.
+
+Captions: Provide a concise technical description in clear text below the image area; this text must not overlap with the visual diagram itself.
+
+
+====================================================================================
+==========================================================================================
+Follow my rules strictly :
+
+ My Rules :
+1. The coordinate axes must be clearly stated with division on both axes .
+2. the equation of each curve must be written close to its graph and should not interfere with  main info .
+3. the  BACKGROUND SHOULD BE VERY LIGHT BLUE .
+4. Coordinates of the intersection points of two or more curves must be  there .
+5. The figure must be describes in text just below the actual image and it should not interfere with the actual image .
+6.No AI content in the image .
+7. very sharp image and graph and text for the image .
+8.equations of horizontal and vertical asymptotes must be there in the graph if they are present in the graph .
+9.All text on the image should be Sharp dark blue .
+10.A single color must be used for all parts of a function but different colors for graph of different functions in an image .
+11. Read the context of  before making the code for the image .  it should not be wrong image or half completed image. there  should be a small description of each image .
+12. furhter I need littel one or two line description of the image in relation to the content for which the image is generated.
+13 very very sharp   text in the image so even if I reduce the size of image to 50 % even then the text is visible.
+ 
+
+Very specific to this Unit  :
+ 1. When the figure is  described  just below the image it should not have AI script which hint it is generated by AI .. it should just refer to the content or the number of the heading for which it is generated. the description should not be in a long single line but  position at the center and in two to three lines . but it should be well below the axes  of the graph . it should not hide the axes. he  textual description of the image  should not overlap the image and well below the  graph and coordinate axes .and the description should explain the text for the image is generated . the description should be sharp so even if I minimize the image to half the text must be clearly visible and legible.the color of description should like so that is contrasted like red.  strictly the text should be below .( think of description in a separate box to explain more .)
+
+====================================
+Add  instruction  in the prompt to write textual explanation of the  image  in the text box  in context with the topic of the content for which image is built.very very sharp   text in the image and in the description text box . so even if I reduce the size of image to 50 % even then the text is visible.
+
+======================
+THE TEXT IN THE TEXT BOX SHOULD BE JUST FIT . NO EXTRA SPACE IN THE TEXT BOX .
+
+============
+##### placement of the image with text wrapping infront of the text . you can do with another script .
+
+============================================================================
+
+*****The graph should have accurate  coordinates of point  or points  and calculation which exactly match with the answers or the expression in the equation . this very important because even if the image is excellent it will be of no use if it does not endorse the solution or the equation .
+

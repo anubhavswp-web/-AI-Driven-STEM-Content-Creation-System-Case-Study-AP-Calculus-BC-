@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Complete Folder Reorganizer</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  padding: 40px;
+}
+button {
+  padding: 14px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Complete Folder Reorganizer</h2>
+<p>
+ZIP files + originals with image versions → <b>original folder</b><br>
+_with_images files + others → <b>final folder</b><br>
+Final folder files are safely renamed.
+</p>
+
+<button onclick="organize()">Select Folder & Run</button>
+
+<script>
+function normalizeBase(name) {
+  return name
+    .toLowerCase()
+    .replace(/\.(docx|doc|pdf)$/i, "")
+    .replace("_with_images", "")
+    .replace(" with images", "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+async function getSafeFinalName(dirHandle, originalName) {
+  const cleaned = originalName.replace(/_with_images/gi, "").trim();
+
+  try {
+    await dirHandle.getFileHandle(cleaned);
+    const parts = cleaned.split(".");
+    const ext = parts.pop();
+    const base = parts.join(".");
+    return `${base} (final).${ext}`;
+  } catch {
+    return cleaned;
+  }
+}
+
+async function organize() {
+  try {
+    const root = await window.showDirectoryPicker();
+    const rootName = root.name;
+
+    const originalDir = await root.getDirectoryHandle(
+      rootName + " original folder",
+      { create: true }
+    );
+
+    const finalDir = await root.getDirectoryHandle(
+      rootName + " final folder",
+      { create: true }
+    );
+
+    const files = [];
+    const imageBases = new Set();
+
+    // Pass 1: detect all bases that have _with_images
+    for await (const [name, handle] of root.entries()) {
+      if (handle.kind === "file") {
+        files.push({ name, handle });
+        if (name.toLowerCase().includes("with_images")) {
+          imageBases.add(normalizeBase(name));
+        }
+      }
+    }
+
+    // Pass 2: move + rename
+    for (const file of files) {
+      const name = file.name;
+      const lower = name.toLowerCase();
+      const ext = lower.split(".").pop();
+
+      let targetDir;
+      let finalName = name;
+
+      // ZIP → original folder
+      if (ext === "zip") {
+        targetDir = originalDir;
+      }
+      // _with_images → final folder (rename applied)
+      else if (lower.includes("with_images")) {
+        targetDir = finalDir;
+        finalName = await getSafeFinalName(finalDir, name);
+      }
+      // originals with image counterpart → original folder
+      else {
+        const base = normalizeBase(name);
+        if (imageBases.has(base)) {
+          targetDir = originalDir;
+        } else {
+          targetDir = finalDir;
+        }
+      }
+
+      const newHandle = await targetDir.getFileHandle(finalName, { create: true });
+      const writable = await newHandle.createWritable();
+      const data = await file.handle.getFile();
+      await writable.write(data);
+      await writable.close();
+
+      await root.removeEntry(name);
+    }
+
+    alert("✅ Done");
+  }
+  catch (err) {
+    console.error(err);
+    alert("❌ Operation cancelled or not supported.");
+  }
+}
+</script>
+
+</body>
+</html>
